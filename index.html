@@ -45,8 +45,8 @@ background-color:  rgb(137, 173, 173);
    overflow: hidden;
    text-align: center;
    font-size: 2rem;
-   border: 3px solid black; ;
-padding:20px;
+   border: 3px solid black; 
+padding:20px;
 }
 button{
    background-color: rgb(137, 173, 173);
@@ -105,8 +105,10 @@ h1{
                <button  onclick="counting()">count</button>
                <button  onclick="countin()">count back</button>
                <button  onclick="counti()">reset</button>
-           </div>      
-   </div>
+           </div>
+      
+   </div>
+
    </div>
     <div class="footer">
     <footer>
@@ -121,14 +123,17 @@ h1{
   navigator.serviceWorker.register('service-worker.js');
 }
    </script>
-<script>    
+   
+<script>
+    
 const add = document.getElementById("screen");
 let count = parseInt(localStorage.getItem("count"))||0
  add.textContent=count; 
 function counting (){
     count ++;
 
-    update();  
+    update()
+  
 }
 function update(){
    localStorage.setItem("count", count);
@@ -146,6 +151,7 @@ function counti (){
 }
 </script>
 </html>
+
 
 
 
