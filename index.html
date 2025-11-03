@@ -118,11 +118,6 @@ h1{
       
    
 </body>
-   <script>
-    if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
-}
-   </script>
    
 <script>
     
@@ -149,8 +144,12 @@ function counti (){
     count = 0;
     update(); 
 }
+   if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
 </script>
 </html>
+
 
 
 
